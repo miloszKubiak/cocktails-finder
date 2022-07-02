@@ -8,7 +8,7 @@
 	--mainSpacing: 0.2rem;
 	--mainTransition: all 0.3s linear;
 	--mainBorderRadius: 0.25rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 102, 255, 0.3);
+	--lightShadow: 2px 5px 3px 0px rgba(0, 102, 255, 0.3);
 	--darkShadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.5);
 	--smallWidth: 85vw;
 	--maxWidth: 40rem;
@@ -38,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	margin-bottom: 1.25rem;
 	letter-spacing: var(--mainSpacing);
 }
@@ -85,7 +85,7 @@ img {
 .nav-links a {
 	display: inline-block;
 	font-weight: bold;
-	padding: .3rem;
+	padding: 0.3rem;
 	margin-right: 2rem;
 	font-size: 1.3rem;
 	letter-spacing: 2px;
@@ -99,5 +99,47 @@ img {
 .logo {
 	width: 8rem;
 	height: 8rem;
-	padding: .3rem;
+	padding: 0.3rem;
+}
+
+/* -----ERROR----- */
+
+.error-page {
+	display: flex;
+	justify-content: center;
+}
+
+.error-container {
+	text-align: center;
+	text-transform: capitalize;
+}
+
+/* -----BUTTONS----- */
+
+/* -----SECTION----- */
+
+.section {
+	padding: 5rem;
+}
+
+.section-title {
+	font-size: 2rem;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+	margin-bottom: 4rem;
+	margin-top: 1rem;
+}
+
+/* -----ABOUT----- */
+
+.about-section {
+	width: var(--smallWidth);
+	max-width: var(--maxWidth);
+	margin: 0 auto;
+}
+.about-section p {
+	line-height: 2rem;
+	font-weight: 500;
+	letter-spacing: 1px;
 }
