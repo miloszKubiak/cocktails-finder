@@ -1,15 +1,16 @@
 /* -----VARIABLES----- */
 :root {
 	--primaryColor: #1e90ff;
+	--primaryLightColor: #b6dafd;
 	--mainWhite: #fff;
 	--mainBackground: #f3f3f3;
 	--mainBlack: #222;
 	--darkGrey: #666;
-	--mainSpacing: 0.2rem;
+	--mainSpacing: 0.1rem;
 	--mainTransition: all 0.3s linear;
 	--mainBorderRadius: 0.25rem;
 	--lightShadow: 2px 5px 3px 0px rgba(0, 102, 255, 0.3);
-	--darkShadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.5);
+	--darkShadow: 5px 10px 5px 0px rgba(0, 45, 194, 0.507);
 	--smallWidth: 85vw;
 	--maxWidth: 40rem;
 	--fullWidth: 1170px;
@@ -123,7 +124,7 @@ img {
 	font-size: 1.2rem;
 	color: var(--primaryColor);
 	border: 2px solid var(--primaryColor);
-	text-transform: uppercase;
+	text-transform: capitalize;
 	letter-spacing: var(--mainSpacing);
 	transition: var(--mainTransition);
 	border-radius: var(--mainBorderRadius);
@@ -135,10 +136,22 @@ img {
 	background: var(--primaryColor);
 }
 
-/* -----SECTION----- */
+.btn-details {
+	padding: .3rem;
+	background: var(--primaryColor);
+	color: var(--mainWhite);
+}
+
+.btn-details:hover {
+	color: var(--primaryColor);
+	background-color: var(--primaryLightColor);
+	border: 2px solid var(--primaryLightColor);
+}
+
+/* -----COCKTAILS LIST----- */
 
 .section {
-	padding: 5rem;
+	padding: 5rem 0;
 }
 
 .section-title {
@@ -147,6 +160,58 @@ img {
 	letter-spacing: var(--mainSpacing);
 	margin-bottom: 4rem;
 	margin-top: 1rem;
+}
+
+.cocktails-center {
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--fullWidth);
+  display: grid;
+	row-gap: 2rem;
+	column-gap: 2rem;
+  /* align-items: start; */
+}
+@media screen and (min-width: 576px) {
+  .cocktails-center {
+    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+  }
+}
+/* -----COCKTAIL----- */
+
+.cocktail {
+	display: grid;
+	grid-template-rows: auto 1fr ;
+	margin-bottom: 2rem;
+	background: var(--mainWhite);
+	box-shadow: var(--lightShadow);
+	border-radius: var(--mainBorderRadius);
+	transition: var(--mainTransition);
+}
+
+.cocktail img {
+	height: 20rem;
+	object-fit: cover;
+	border-top-left-radius: var(--mainBorderRadius);
+	border-top-right-radius: var(--mainBorderRadius);
+}
+
+.cocktail:hover {
+	box-shadow: var(--darkShadow);
+}
+
+.cocktail-footer {
+	padding: 1.5rem;
+	color: var(--mainBlack);
+}
+
+.cocktail-footer h3 {
+	font-size: 2rem;
+	margin-bottom: .2rem;
+}
+
+.cocktail-footer p {
+  color: var(--darkGrey);
+  margin-bottom: 0.7rem;
 }
 
 /* -----ABOUT----- */
