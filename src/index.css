@@ -144,7 +144,6 @@ img {
 .section-title {
 	font-size: 2rem;
 	text-align: center;
-	text-transform: capitalize;
 	letter-spacing: var(--mainSpacing);
 	margin-bottom: 4rem;
 	margin-top: 1rem;
