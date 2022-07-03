@@ -116,6 +116,25 @@ img {
 
 /* -----BUTTONS----- */
 
+.btn, .btn-primary {
+	display: inline-block;
+	padding: .6rem;
+	background: transparent;
+	font-size: 1.2rem;
+	color: var(--primaryColor);
+	border: 2px solid var(--primaryColor);
+	text-transform: uppercase;
+	letter-spacing: var(--mainSpacing);
+	transition: var(--mainTransition);
+	border-radius: var(--mainBorderRadius);
+	cursor: pointer;
+}
+
+.btn:hover {
+	color: var(--mainWhite);
+	background: var(--primaryColor);
+}
+
 /* -----SECTION----- */
 
 .section {
@@ -142,4 +161,35 @@ img {
 	line-height: 2rem;
 	font-weight: 500;
 	letter-spacing: 1px;
+}
+
+/* -----LOADER----- */
+
+.loader {
+	display: grid;
+	grid-template-areas: stack;
+	margin-top: 10rem;
+}
+
+.dot {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background-color: var(--primaryColor);
+	grid-area: stack;
+
+	animation: loader 1s linear infinite alternate-reverse;
+}
+
+.dot:nth-child(2) {
+	animation-delay: 333ms;
+}
+
+.dot:nth-child(3) {
+	animation-delay: 667ms;
+}
+
+@keyframes loader {
+	0% { transform: translateX(5rem);}
+	100% { transform: translateX(-5rem);}
 }
