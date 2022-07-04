@@ -214,6 +214,55 @@ img {
   margin-bottom: 0.7rem;
 }
 
+.cocktail-section {
+  text-align: center;
+}
+
+.drink {
+  width: var(--smallWidth);
+  max-width: var(--maxWidth);
+  text-align: left;
+  margin: 0 auto;
+}
+
+.drink img {
+  border-radius: var(--mainBorderRadius);
+}
+
+.drink p {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.4;
+}
+
+.drink span {
+  margin-right: .6rem;
+}
+
+.drink-info {
+  padding-top: 2rem;
+}
+
+.drink-data {
+  background: var(--primaryLightColor);
+  color: var(--primaryColor);
+  border-radius: var(--mainBorderRadius);
+  padding: .3rem .5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .drink-info {
+    padding-top: 0;
+  }
+}
+
 /* -----SEARCH FORM----- */
 
 .search {
