@@ -5,8 +5,8 @@ const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-	const [loading, setLoading] = useState(true);
-	const [searchTerm, setSearchTerm] = useState("b");
+	const [loading, setLoading] = useState(false);
+	const [searchTerm, setSearchTerm] = useState("");
 	const [cocktails, setCocktails] = useState([]);
 
 	const fetchDrinks = useCallback(async () => {
@@ -45,7 +45,7 @@ const AppProvider = ({ children }) => {
 	}, [searchTerm]);
 
 	useEffect(() => {
-		fetchDrinks();
+		searchTerm && fetchDrinks();
 	}, [searchTerm, fetchDrinks]);
 
 	return (

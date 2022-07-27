@@ -152,15 +152,14 @@ img {
 /* -----COCKTAILS LIST----- */
 
 .section {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .section-title {
   font-size: 2rem;
   text-align: center;
   letter-spacing: var(--mainSpacing);
-  margin-bottom: 4rem;
-  margin-top: 1rem;
+  margin: 2rem auto;
 }
 
 .cocktails-center {
